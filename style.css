@@ -56,11 +56,6 @@ hr {
     text-align: justify;
 }
 
-@media screen and (max-width: 1024px) and (max-height: 1024px) {
-    .sendOrRequestLogoArt {
-        display: none !important;
-    }
-}
 
 .tip-button {
   background: none;
@@ -253,4 +248,10 @@ hr {
   100% {
     transform: rotate();
   }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1024px) {
+    .logoArt {
+        display: none !important;
+    }
 }
