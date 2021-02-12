@@ -7,6 +7,9 @@ html {
 
 pre {
     color: #157347;
+    white-space:pre-wrap;
+    text-align:justify;
+    word-wrap:break-word;
 }
 
 form {
