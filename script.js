@@ -1,3 +1,30 @@
+// javascript function that will prevent user from submitting payment if not all fields are filled out
+    (function () {
+        "use strict";
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener(
+                "submit",
+                function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault();
+                        //grabbing all the inputs from the form and then calling the sendTransaction function which is defined above
+
+                    }
+
+                    form.classList.add("was-validated");
+                },
+                false
+            );
+        });
+    })();
+
 const tipButtons = document.querySelectorAll('.tip-button')
  
 // Loop through all buttons (allows for multiple buttons on page)
