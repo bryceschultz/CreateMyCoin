@@ -13,14 +13,6 @@ form {
     background-color: white;
 }
 
-body {
-  align-items: center;
-  background: white;
-  display: flex;
-  justify-content: center;
-  -webkit-font-smoothing: antialiased;
-}
-
 .centered-main-content {
     height: 100%;
     background-position: center;
@@ -42,6 +34,14 @@ body {
 hr {
     margin: auto;
     width: 40%;
+}
+
+.button {
+    width: 100%;
+    height: 40px;
+    background-color: #157347;
+    border-color: #146c43;
+    color: white;
 }
 
 .tip-button {
