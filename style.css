@@ -44,6 +44,18 @@ hr {
     color: white;
 }
 
+.container {
+    text-align: center;
+}
+
+.container pre {
+    display: inline-block;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
 .tip-button {
   background: none;
   border: 0;
