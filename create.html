@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <body>
+        <div class="centered-main-content">
+            <a id="plusButton" class="fab-button green" href="#">
+                <div class="plus"></div>
+            </a>
+            <div class="container sendOrRequestLogoArt">
+                <pre>
+	
+░█▀▀▀█ █▀▀ █▀▀▄ █▀▀▄ 
+─▀▀▀▄▄ █▀▀ █──█ █──█ 
+░█▄▄▄█ ▀▀▀ ▀──▀ ▀▀▀─
+                </pre>
+            </div>
+            <br />
+            <br />
+            <div class="middle">
+                <br />
+                <br />
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-2">
+                        <p><strong>Coin</strong></p>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="validationCustom03" class="form-label">Algorand Address</label>
+                        <input id="originWalletAddress" type="text" class="form-control" id="validationCustom03" required />
+                        <div class="invalid-feedback">
+                            Please provide a valid coin name.
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="validationCustom03" class="form-label">Passphrase</label>
+                        <input id="originWalletPassphrase" type="text" class="form-control" id="validationCustom03" required />
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                    </div>
+                    <p><strong>Units in Circulation</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="validationCustom03" class="form-label">Amount in algos</label>
+                        <input id="transactionAmount" type="text" class="form-control" id="validationCustom03" required />
+                        <div class="invalid-feedback">
+                         Please enter how many units of your coin you would like to exist   
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-2">
+                        <p><strong>Payment</strong></p>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="validationCustom03" class="form-label">Algorand Address</label>
+                        <input id="originWalletAddress" type="text" class="form-control" id="validationCustom03" required />
+                        <div class="invalid-feedback">
+                            Please provide a valid algorand address.
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="validationCustom03" class="form-label">Passphrase</label>
+                        <input id="originWalletPassphrase" type="text" class="form-control" id="validationCustom03" required />
+                        <div class="invalid-feedback">
+                            Please enter the passphrase for the provided address.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                           <button class="tip-button">
+                              <span class="tip-button__text">Create My Coin</span>
+                              <div class="coin-wrapper">
+                                <div class="coin">
+                                  <div class="coin__middle"></div>
+                                  <div class="coin__back"></div>
+                                  <div class="coin__front"></div>
+                                </div>
+                              </div>
+                            </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <p id="loadingStatement"></p>
+                    <strong><p id="errorStatement" style="color: red;"></p></strong>
+                    <div id="loadingGif" style="width: 200px; height: auto;" class="container flex-row justify-content-center"><img src="ajax-loader.gif" alt="loading gif" /></div>
+                    <div id="errorButton">
+                        <a href="">
+                            <button class="button btn btn-success">Try Again</button>
+                        </a>
+                    </div>
+                    <div id="transactionDetails">
+                    
+                    
+                        <br />
+                        <a href="">
+                            <button style="margin-bottom: 20px;" class="button btn btn-success">Home</button>
+                        </a>
+                        <a href="">
+                            <button style="margin-bottom: 20px;" class="button btn btn-success">New Payment</button>
+                        </a>
+                        <a href="">
+                            <button class="button btn btn-success">New Request</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+    </body>
+    <script src="script.js"></script>
+  </body>
+</html>
