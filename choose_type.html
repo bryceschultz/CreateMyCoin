@@ -22,12 +22,14 @@
                         <div class="btn-group">
                       <a style="width:100%" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" href="#">Token type <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a href="#">cryptocurrency</a></li>
-                        <li class="dropdown-item"><a href="#">non fungible token</a></li>
+                        <li class="dropdown-item"><a href="#" onclick="return updateButtonToCryptocurrency();">cryptocurrency</a></li>
+                        <li class="dropdown-item"><a href="#" onclick="return updateButtonToNft();">non fungible token</a></li>
                       </ul>
                     </div>
                       <br><br><br>
+                      <a id="startCreatingButton" href="#">
                       <button style="width:100%" class="btn btn-warning" type="button">Start creating</button>
+                      </a>
                     </div>
                 </div>
               </div>
@@ -36,9 +38,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
       $(".dropdown-menu li a").click(function(){
-  var selText = $(this).text();
-  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-});
+        var selText = $(this).text();
+        $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+      });
+      function updateButtonToCryptocurrency() {
+        document.getElementById("startCreatingButton").href="cryptocurrency.html"; 
+      }
+      function updateButtonToNft() {
+        document.getElementById("startCreatingButton").href="nft.html"; 
+      }
     </script>
   </body>
 </html>
