@@ -14,7 +14,10 @@
       /* Style the form */
 #regForm {
   background-color: #ffffff;
-  margin: 100px auto;
+  margin-right: 100px auto;
+  margin-left: 100px auto;
+  margin-bottom: 100px auto;
+  margin-top: 50px auto;
   padding: 40px;
   width: 70%;
   min-width: 300px;
@@ -157,7 +160,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     //document.getElementById("regForm").submit();
-    $('.freezeframe').freezeframe();
+    $('.freezeframe').freeze();
     return false;
   }
   // Otherwise, display the correct tab:
