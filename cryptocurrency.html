@@ -8,6 +8,8 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
+    <script type="text/javascript" src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
     <style>
       /* Style the form */
 #regForm {
@@ -68,7 +70,7 @@ form {
   <body>
             <div class="centered-main-content">
                 <div class="middle">
-<img style="height:75%;width:75%;" src="images/logo.gif" alt="CreateMyCoin floating gif" />
+<img class="freezeframe freezeframe-responsive" style="height:75%;width:75%;" src="images/logo.gif" alt="CreateMyCoin floating gif" />
   <br><br>
                     <hr />
                     
@@ -155,6 +157,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     document.getElementById("regForm").submit();
+    $('.freezeframe').freezeframe();
     return false;
   }
   // Otherwise, display the correct tab:
