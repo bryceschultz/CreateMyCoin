@@ -113,11 +113,6 @@ input.invalid {
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
     </style>
   </head>
   <body>
@@ -126,8 +121,7 @@ input.invalid {
 <img class="freezeframe freezeframe-responsive" style="height:75%;width:75%;" src="images/logo.gif" alt="CreateMyCoin floating gif" />
   <br><br>
                     <hr />
-                    <div class="bb">
-                  <form id="regForm" action="">
+                  <form class="bb" id="regForm" action="">
 <!-- One "tab" for each step in the form: -->
 <div class="tab">Name:
   <p><input placeholder="First name..." oninput="this.className = ''"></p>
@@ -165,8 +159,7 @@ input.invalid {
   <span class="step"></span>
 </div>
 
-</form>
-                  </div>               
+</form>             
                   
                   
                 </div>
