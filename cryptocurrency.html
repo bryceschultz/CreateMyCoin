@@ -81,12 +81,28 @@ input.invalid {
   border: 6px solid transparent;
   background: linear-gradient(#ffffff, #ffffff) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #f4b543, #fbee58) border-box;
 }
+      
+ .logo-animate {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: drop;
+  animation-duration: 3s;  
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes drop {
+  from {top: 0px;}
+  to {top: 200px;}
+}
    </style>
   </head>
   <body>
             <div class="centered-main-content">
                 <div class="middle">
-<img class="freezeframe freezeframe-responsive" style="height:75%;width:75%;" src="images/logo.gif" alt="CreateMyCoin floating gif" />
+<img id="logo" style="height:75%;width:75%;" src="images/logo.gif" alt="CreateMyCoin floating gif" />
   <br><br>
                     <hr />
                   <form class="form-border" id="regForm" action="">
@@ -171,7 +187,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     //document.getElementById("regForm").submit();
-    $('.freezeframe').freeze();
+    $('#logo').addClass('logo-animate');
     return false;
   }
   // Otherwise, display the correct tab:
