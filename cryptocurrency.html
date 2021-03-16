@@ -127,7 +127,7 @@ input.invalid {
   <p><input placeholder="Password..." oninput="this.className = ''"></p>
 </div>
                     
-<div class="finished">Login Info:
+<div id="finished">Login Info:
   <p>Coin successfully configured. Proceed to payment to launch your coin on the Algorand network</p>
   <button class="btn btn-warning" type="button">Pay</button>
 </div>
@@ -156,6 +156,9 @@ input.invalid {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
+      
+document.getElementById('finished').style.display = 'none';
+      
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -191,7 +194,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     $('#logo').addClass('logo-animate');
-    
+    document.getElementById('finished').style.display = 'block';
     return false;
   }
   // Otherwise, display the correct tab:
