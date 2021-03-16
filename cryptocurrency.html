@@ -82,8 +82,6 @@ input.invalid {
 }
       
  .logo-animate {
-  width: 100px;
-  height: 100px;
   position: relative;
   animation-name: drop;
   animation-duration: 3s;  
@@ -196,7 +194,6 @@ function nextPrev(n) {
     document.getElementById('dots').style.display = 'none';
     document.getElementById('buttons').style.display = 'none';
     document.getElementById('finished').style.display = 'block';
-    return false;
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
