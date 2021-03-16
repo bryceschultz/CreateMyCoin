@@ -124,7 +124,7 @@ input.invalid {
   <p><input placeholder="Password..." oninput="this.className = ''"></p>
 </div>
                     
-<div id="finished">
+<div class="tab">
   <p>Coin successfully configured. Proceed to payment to launch your coin on the Algorand network</p>
 </div>
 
@@ -137,6 +137,7 @@ input.invalid {
 
 <!-- Circles which indicates the steps of the form: -->
 <div id="dots" style="text-align:center;margin-top:40px;">
+  <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
@@ -169,7 +170,10 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Pay";
+    document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
+    document.getElementById("nextBtn").classList.add = "btn-warning";
+    document.getElementById('dots').style.display = 'none';
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
@@ -190,11 +194,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     $('#logo').addClass('logo-animate');
-    document.getElementById("nextBtn").innerHTML = "Pay";
-    document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
-    document.getElementById("nextBtn").classList.add = "btn-warning";
-    document.getElementById('dots').style.display = 'none';
-    document.getElementById('finished').style.display = 'block';
+
     return false;
   }
   // Otherwise, display the correct tab:
