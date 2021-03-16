@@ -120,7 +120,7 @@ input.invalid {
 </div>
                     
 <div class="tab">
-  <p>Coin successfully configured. Proceed to payment to launch your coin on the Algorand network</p>
+  Coin successfully configured. Proceed to payment to launch your coin on the Algorand network
 </div>
 
 <div id="buttons" style="overflow:auto;">
@@ -160,7 +160,11 @@ function showTab(n) {
   } else {
     document.getElementById("prevBtn").style.display = "inline";
   }
+  if (n == (x.length - 2)) {
+    document.getElementById("nextBtn").innerHTML = "Done";
+  }
   if (n == (x.length - 1)) {
+    document.getElementById("prevBtn").style.display = "none";
     document.getElementById("nextBtn").innerHTML = "Pay";
     document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
     document.getElementById("nextBtn").classList.add = "btn-warning";
