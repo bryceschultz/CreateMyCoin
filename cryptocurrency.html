@@ -190,10 +190,11 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    //$('#logo').addClass('logo-animate');
+    $('#logo').addClass('logo-animate');
     document.getElementById('dots').style.display = 'none';
     document.getElementById('buttons').style.display = 'none';
     document.getElementById('finished').style.display = 'block';
+    return false;
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
