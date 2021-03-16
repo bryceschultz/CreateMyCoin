@@ -126,6 +126,11 @@ input.invalid {
   <p><input placeholder="Username..." oninput="this.className = ''"></p>
   <p><input placeholder="Password..." oninput="this.className = ''"></p>
 </div>
+                    
+<div class="finished">Login Info:
+  <p>Coin successfully configured. Proceed to payment to launch your coin on the Algorand network</p>
+  <button class="btn btn-warning" type="button">Pay</button>
+</div>
 
 <div style="overflow:auto;">
   <div style="float:right;">
@@ -135,7 +140,7 @@ input.invalid {
 </div>
 
 <!-- Circles which indicates the steps of the form: -->
-<div style="text-align:center;margin-top:40px;">
+<div class="dots" style="text-align:center;margin-top:40px;">
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
@@ -185,8 +190,8 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    //document.getElementById("regForm").submit();
     $('#logo').addClass('logo-animate');
+    
     return false;
   }
   // Otherwise, display the correct tab:
