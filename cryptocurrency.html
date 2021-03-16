@@ -126,7 +126,6 @@ input.invalid {
                     
 <div id="finished">
   <p>Coin successfully configured. Proceed to payment to launch your coin on the Algorand network</p>
-  <button class="btn btn-warning" type="button">Pay</button>
 </div>
 
 <div id="buttons" style="overflow:auto;">
@@ -191,9 +190,11 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     $('#logo').addClass('logo-animate');
+    document.getElementById("nextBtn").innerHTML = "Pay";
+    document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
+    document.getElementById("nextBtn").classList.add = "btn-warning";
     document.getElementById('dots').style.display = 'none';
-    //document.getElementById('buttons').style.display = 'none';
-    //document.getElementById('finished').style.display = 'block';
+    document.getElementById('finished').style.display = 'block';
     return false;
   }
   // Otherwise, display the correct tab:
