@@ -156,8 +156,8 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    //document.getElementById("prevBtn").style.display = "none";
-    //document.getElementById("nextBtn").innerHTML = "Pay";
+    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("nextBtn").innerHTML = "Pay";
     //document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
     //document.getElementById("nextBtn").classList.add = "btn-warning";
     //document.getElementById('dots').style.display = 'none';
@@ -180,7 +180,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    $('#logo').addClass('logo-animate');
+    //$('#logo').addClass('logo-animate');
 
     return false;
   }
