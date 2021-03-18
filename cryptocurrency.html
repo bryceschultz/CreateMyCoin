@@ -162,13 +162,7 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("prevBtn").style.display = "none";
-    document.getElementById("nextBtn").innerHTML = "Pay";
-    //document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
-    //document.getElementById("nextBtn").classList.add = "btn-warning";
-    //document.getElementById('dots').style.display = 'none';
-  } else if (n == (x.length - 2)) {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
@@ -188,8 +182,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    //$('#logo').addClass('logo-animate');
-
+    document.getElementById("regForm").submit();
     return false;
   }
   // Otherwise, display the correct tab:
