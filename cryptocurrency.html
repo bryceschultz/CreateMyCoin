@@ -156,12 +156,11 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
+    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("nextBtn").innerHTML = "Pay";
     //document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
     //document.getElementById("nextBtn").classList.add = "btn-warning";
     //document.getElementById('dots').style.display = 'none';
-  } else if (n == (x.length - 0)) {
-    document.getElementById("prevBtn").style.display = "none";
-    document.getElementById("nextBtn").innerHTML = "Pay";
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
