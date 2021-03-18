@@ -114,11 +114,6 @@ input.invalid {
   <p><input placeholder="mm" oninput="this.className = ''"></p>
   <p><input placeholder="yyyy" oninput="this.className = ''"></p>
 </div>
-
-<div class="tab">
-  <p><input placeholder="Username..." oninput="this.className = ''"></p>
-  <p><input placeholder="Password..." oninput="this.className = ''"></p>
-</div>
                     
 <div class="tab">
   Coin successfully configured. Proceed to payment to launch your coin on the Algorand network
@@ -133,7 +128,6 @@ input.invalid {
 
 <!-- Circles which indicates the steps of the form: -->
 <div style="text-align:center;margin-top:40px;">
-  <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
@@ -163,7 +157,7 @@ function showTab(n) {
   }
   if (n == (x.length - 1)) {
     //document.getElementById("prevBtn").style.display = "none";
-    document.getElementById("nextBtn").innerHTML = "Pay";
+    //document.getElementById("nextBtn").innerHTML = "Pay";
     //document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
     //document.getElementById("nextBtn").classList.add = "btn-warning";
     //document.getElementById('dots').style.display = 'none';
