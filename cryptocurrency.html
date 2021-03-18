@@ -101,7 +101,8 @@ input.invalid {
 <img id="logo" style="height:75%;width:75%;" src="images/logo.gif" alt="CreateMyCoin floating gif" />
   <br><br>
                     <hr />
-                  <form class="form-border" id="regForm" action="">
+
+<form class="form-border" id="regForm" action="">
 <!-- One "tab" for each step in the form: -->
 <div class="tab">
   <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
@@ -166,9 +167,9 @@ function showTab(n) {
   if (n == (x.length - 1)) {
     document.getElementById("prevBtn").style.display = "none";
     document.getElementById("nextBtn").innerHTML = "Pay";
-    document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
-    document.getElementById("nextBtn").classList.add = "btn-warning";
-    document.getElementById('dots').style.display = 'none';
+    //document.getElementById("nextBtn").classList.remove = "btn-outline-warning";
+    //document.getElementById("nextBtn").classList.add = "btn-warning";
+    //document.getElementById('dots').style.display = 'none';
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
