@@ -167,8 +167,12 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("prevBtn").style.display = "none";
+  } else if (n == (x.length - 2)) {
+    document.getElementById("nextBtn").innerHTML = "Configure";
+  }
+  else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
   // ... and run a function that displays the correct step indicator:
@@ -187,9 +191,6 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("buttons").style.display = "none";
-    document.getElementById("nextBtn").style.display = "none";
-    document.getElementById("prevBtn").style.display = "none";
     //document.getElementById("regForm").submit();
     return false;
   }
